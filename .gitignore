@@ -205,3 +205,48 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ========================================================================
+# FP&A PROJECT-SPECIFIC IGNORES - DO NOT REMOVE
+# ========================================================================
+
+# Credentials & secrets — NEVER commit these
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+secrets.json
+config.local.*
+
+# Claude Code local config (may contain tokens)
+.claude/
+.anthropic/
+
+# Raw data files — treat as confidential by default
+data/raw/*
+data/processed/*
+
+# Generated outputs — regenerate from code, don't commit
+outputs/*
+
+# Excel lock files & temporary Office files
+~$*.xlsx
+~$*.xlsm
+~$*.docx
+~$*.pptx
+*.tmp
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS-specific files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
